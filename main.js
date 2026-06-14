@@ -3,4 +3,4 @@ async function cargar(id, archivo) {
   document.getElementById(id).innerHTML = await respuesta.text();
 }
 
-cargar("boarding", "componentes/boarding.html");
+cargar("boarding", "Componentes/boarding.html");
