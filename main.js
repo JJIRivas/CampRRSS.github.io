@@ -4,4 +4,6 @@ async function cargar(id, archivo) {
 }
 
 cargar("boarding", "Componentes/boarding.html");
-cargar("boarding2", "Componentes/boarding.html");
+cargar("boarding2", "Componentes/boarding2.html");
+cargar("infoTitle", "Componentes/infoTitle.html");
+cargar("firstInfo", "Componentes/firstInfo.html");
