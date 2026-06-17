@@ -1,6 +1,5 @@
 body {
-    margin: 0;
-    margin-left: 50px;
+    margin: 50;
     font-family:
         system-ui,
         -apple-system,
@@ -108,11 +107,24 @@ body {
     background-color: #2784f5;
     border-radius: 25px;
     padding: 20px;
-
-    min-height: 100px;
 }
 
 .info-title .content {
+    text-align: center;
+    font-size: 30px;
+    flex: 1;
+}
+
+.main-title {
+    display: flex;
+    gap: 20px;
+
+    background-color: #2784f5;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.main-title .content {
     text-align: center;
     font-size: 30px;
     flex: 1;
@@ -135,9 +147,31 @@ body {
     flex: 1;
 }
 
+.simulator {
+    display: flex;
+    gap: 20px;
+
+    background-color: #ffff;
+    border-radius: 25px;
+    padding: 20px;
+
+    min-height: 800px;
+}
+
+.simulator .content {
+    text-align: center;
+    font-size: 30px;
+    flex: 1;
+}
+
 .boarding-card1,
 .boarding-card2,
-.info-title,
-.first-info {
+.first-info,
+.simulator {
     width: 1700px;
+}
+
+.info-title,
+.main-title {
+    width: 500vh;
 }
