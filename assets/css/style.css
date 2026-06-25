@@ -2534,28 +2534,34 @@ input:checked + .toggle-slider:before {
     border-color: var(--primary-color);
 }
 
+/* Columnas explícitas: post izquierda (2) | inferencias derecha (3) */
 .algorithm-analysis {
     display: flex;
-    justify-content: left;
-
-    align-items: start; /* Cambiado de 'center' a 'start' para alinear arriba si los textos son largos */
-    gap: 30px; /* Un poco más de aire entre el post y las observaciones */
+    align-items: start;
+    gap: 30px;
     margin-top: 50px;
     margin-bottom: 30px;
     width: 100%;
+    justify-content: center;
+}
+/* Oculta el side-info vacío en PC también */
+.side-info:empty {
+    display: none;
 }
 
-.side-info {
-    /* Quitamos el max-width: 300px para que use el espacio que Grid le asigne */
-    display: flex;
-    flex-direction: column; /* Cambiado de 'row' a 'column' para que bajen ordenadas */
-    gap: 15px;
-    width: 100%;
-}
-
+/* Post: ancho fijo para que no se estire raro */
 .center-post {
+    flex: 0 0 420px;
     display: flex;
-    width: 100%;
+}
+
+/* Inferencias: toma el resto */
+.side-info {
+    flex: 0 1 auto; /* crece hasta su contenido, no más */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 0;
 }
 
 .profile-arrow {
@@ -2568,11 +2574,10 @@ input:checked + .toggle-slider:before {
     margin: 30px 0;
 }
 
+/* La card del perfil generado centrada y con buen ancho */
 .generated-profile {
-    max-width: 1500px;
-
+    max-width: 95%;
     margin: 0 auto;
-
     border-radius: 20px;
 }
 
@@ -2585,4 +2590,147 @@ input:checked + .toggle-slider:before {
 .generated-profile .stat-icon {
     width: 120px;
     height: 120px;
+}
+
+.hero-content > .info-card {
+    width: fit-content;
+    max-width: 700px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+/* ============================================================
+   TABLET  (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .hero-image {
+        flex: 0 0 380px;
+    }
+    .hero-image img {
+        max-width: 380px;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================================
+   MOBILE  (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* --- Navbar --- */
+    .navbar-custom {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 20px;
+        gap: 10px;
+    }
+    .navbar-menu {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        width: 100%;
+    }
+
+    .hero-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .hero-btn {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse !important;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .hero-content h1 {
+        font-size: 2rem !important;
+    } /* inline 40px */
+    .hero-content p {
+        font-size: 1.1rem !important;
+        max-width: 100% !important;
+    }
+
+    .main-content {
+        margin-top: 130px;
+    } /* navbar crece en mobile */
+    .dashboard-content {
+        padding: 16px;
+    } /* menos respiración lateral */
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Card grande: font-size 40px y padding-left 50px están inline */
+    .stat-value {
+        font-size: 1.3rem !important;
+        padding-left: 16px !important;
+    }
+    .stat-label {
+        font-size: 1.1rem !important;
+        padding-left: 16px !important;
+    }
+
+    /* Tabla: que no se desborde */
+    .table-dat {
+        width: 100%;
+        font-size: 0.85rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .algorithm-analysis {
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    /* center-post pasa a ancho completo */
+    .center-post {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .rider-card {
+        max-width: 100%;
+    }
+
+    .profile-arrow {
+        font-size: 40px;
+        margin: 16px 0;
+    }
+
+    .generated-profile {
+        max-width: 100%;
+    }
+}
+
+/* ============================================================
+   MOBILE PEQUEÑO  (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+    .navbar-custom {
+        padding: 12px 14px;
+    }
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    .navbar-menu a {
+        font-size: 0.85rem;
+    }
+    .main-content {
+        margin-top: 140px;
+    }
 }
