@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detras del Scroll</title>
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+        />
+        <link
+            href="./assets/icons/fontawesome/css/fontawesome.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="./assets/icons/fontawesome/css/brands.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="./assets/icons/fontawesome/css/solid.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <!-- NavBar -->
+        <nav class="navbar-custom">
+            <div class="navbar-logo">
+                <a href="index.html">Detrás del Scroll</a>
+            </div>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="datos.html" class="active">Tus datos</a></li>
+                <li><a href="algoritmos.html">Algoritmos</a></li>
+                <li><a href="bienestar.html">Bienestar digital</a></li>
+                <li><a href="acerca.html">Test</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="hero-section" style="flex-direction: row-reverse">
+                <div class="hero-content">
+                    <h1 style="font-size: 40px; font-weight: 600">
+                        Internet no solo te muestra contenido: también aprende
+                        de ti.
+                    </h1>
+
+                    <p style="font-size: 25px; max-width: 80%">
+                        Cada interacción deja pistas sobre tus gustos, hábitos y
+                        emociones. Las plataformas usan esa información para
+                        entender qué te interesa y cómo mantener tu atención.
+                    </p>
+
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i
+                                    class="bi bi-eye-fill"
+                                    style="font-size: 40px"
+                                ></i>
+                            </div>
+
+                            <div>
+                                <h3 style="font-weight: 600">Qué miras</h3>
+                                <p style="font-size: 18px">
+                                    El contenido que ves revela tus intereses.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div
+                                class="info-icon"
+                                style="background-color: #ece9fa"
+                            >
+                                <i
+                                    class="bi bi-clock-fill"
+                                    style="font-size: 35px; color: #8250e9"
+                                ></i>
+                            </div>
+
+                            <div>
+                                <h3 style="font-weight: 600">
+                                    Cuánto tiempo te quedas
+                                </h3>
+                                <p style="font-size: 18px">
+                                    El tiempo en pantalla muestra qué logra
+                                    retenerte.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div
+                                class="info-icon"
+                                style="background-color: #e8f3f0"
+                            >
+                                <i
+                                    class="bi bi-send-fill"
+                                    style="font-size: 35px; color: #3ec283"
+                                ></i>
+                            </div>
+
+                            <div>
+                                <h3 style="font-weight: 600">
+                                    Qué guardas o compartes
+                                </h3>
+                                <p style="font-size: 18px">
+                                    Tus acciones indican qué valoras o
+                                    recomiendas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i
+                                    class="bi bi-hand-thumbs-up-fill"
+                                    style="font-size: 35px; color: blue"
+                                ></i>
+                            </div>
+
+                            <div>
+                                <h3 style="font-weight: 600">
+                                    Cómo interactúas
+                                </h3>
+                                <p style="font-size: 18px">
+                                    Likes, comentarios y clics ayudan a
+                                    perfilarte.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img src="assets/images/persona.png" alt="Imagen" />
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Grid -->
+                <div
+                    class="stats-grid"
+                    style="grid-template-columns: repeat(2, 1fr)"
+                >
+                    <table class="table-dat">
+                        <tr>
+                            <th style="width: 50%">Acción del usuario</th>
+                            <th>Lo que la plataforma aprende</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i
+                                    class="bi bi-heart-fill"
+                                    style="
+                                        color: red;
+                                        font-size: 20px;
+                                        padding-right: 20px;
+                                    "
+                                ></i>
+                                Das like
+                            </td>
+                            <td>Qué contenido prefieres ver</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i
+                                    class="bi bi-play-fill"
+                                    style="
+                                        color: purple;
+                                        font-size: 20px;
+                                        padding-right: 20px;
+                                    "
+                                ></i>
+                                Ves un video completo
+                            </td>
+                            <td>Qué logra retener tu atencion</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i
+                                    class="bi bi-chat-left-text-fill"
+                                    style="
+                                        color: blue;
+                                        font-size: 20px;
+                                        padding-right: 20px;
+                                    "
+                                ></i>
+                                Comentas
+                            </td>
+                            <td>Qué temas te movilizan</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i
+                                    class="bi bi-person-plus-fill"
+                                    style="
+                                        color: green;
+                                        font-size: 20px;
+                                        padding-right: 20px;
+                                    "
+                                ></i>
+                                Sigues cuentas
+                            </td>
+                            <td>Qué intereses tienes</td>
+                        </tr>
+                    </table>
+
+                    <div
+                        class="stat-card"
+                        style="
+                            border-radius: 24px;
+                            padding: 40px;
+                            min-height: 220px;
+                            background-color: #eef3ff;
+                        "
+                    >
+                        <div
+                            class="stat-main"
+                            style="justify-content: flex-start"
+                        >
+                            <div class="stat-icon success">
+                                <i class="bi bi-shield-lock-fill"></i>
+                            </div>
+
+                            <div class="stat-content">
+                                <div
+                                    class="stat-value"
+                                    style="
+                                        color: var(--text-primary);
+                                        font-size: 40px;
+                                        padding-left: 50px;
+                                    "
+                                >
+                                    Tus datos no son solo tu nombre o correo
+                                </div>
+                                <div
+                                    class="stat-label"
+                                    style="
+                                        font-size: 40px;
+                                        color: var(--primary-color);
+                                        font-weight: 600;
+                                        padding-left: 50px;
+                                    "
+                                >
+                                    También son tus hábitos digitales.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
